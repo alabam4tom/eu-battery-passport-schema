@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.dppify.com/schemas/eu-battery-passport-v1.json",
+  "title": "EU Battery Digital Product Passport (Regulation (EU) 2023/1542, Annex XIII)",
+  "type": "object",
+  "required": ["batteryCategory", "chemistry"],
+  "properties": {
+    "gtin": { "type": "string", "pattern": "^[0-9]{8,14}$" },
+    "batchNumber": { "type": "string" },
+    "serialNumber": { "type": "string" },
+    "batteryCategory": {
+      "type": "string",
+      "enum": ["ev", "lmt", "industrial_gt_2kwh"]
+    },
+    "chemistry": { "type": "string", "minLength": 1 },
+    "ratedCapacityAh": { "type": "number", "minimum": 0 },
+    "ratedEnergyKwh": { "type": "number", "minimum": 0 },
+    "nominalVoltageV": { "type": "number", "minimum": 0 },
+    "carbonFootprintKgCo2ePerKwh": { "type": "number", "minimum": 0 },
+    "carbonFootprintPerformanceClass": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"]
+    },
+    "carbonFootprintStudyUrl": { "type": "string", "format": "uri" },
+    "recycledContent": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["material", "percentage"],
+        "properties": {
+          "material": { "type": "string" },
+          "percentage": { "type": "number", "minimum": 0, "maximum": 100 }
+        }
+      }
+    },
+    "criticalRawMaterials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["material"],
+        "properties": {
+          "material": { "type": "string" },
+          "massPercent": { "type": "number", "minimum": 0, "maximum": 100 }
+        }
+      }
+    },
+    "hazardousSubstances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["substance"],
+        "properties": {
+          "substance": { "type": "string" },
+          "casNumber": { "type": "string" },
+          "concentrationPercent": { "type": "number", "minimum": 0, "maximum": 100 }
+        }
+      }
+    },
+    "disassemblyInstructions": { "type": "string" },
+    "disassemblyManualUrl": { "type": "string", "format": "uri" },
+    "stateOfHealthPercent": { "type": "number", "minimum": 0, "maximum": 100 },
+    "cycleCount": { "type": "integer", "minimum": 0 }
+  }
+}

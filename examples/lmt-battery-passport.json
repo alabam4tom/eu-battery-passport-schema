@@ -1,0 +1,25 @@
+{
+  "gtin": "03760123456789",
+  "batchNumber": "LOT-2026-LY4",
+  "serialNumber": "VC-720-004819",
+  "batteryCategory": "lmt",
+  "chemistry": "Lithium-ion NMC 811",
+  "ratedCapacityAh": 20,
+  "ratedEnergyKwh": 0.72,
+  "nominalVoltageV": 36,
+  "carbonFootprintKgCo2ePerKwh": 54.2,
+  "carbonFootprintPerformanceClass": "B",
+  "recycledContent": [
+    { "material": "Cobalt", "percentage": 16 },
+    { "material": "Lithium", "percentage": 6 },
+    { "material": "Nickel", "percentage": 6 }
+  ],
+  "criticalRawMaterials": [
+    { "material": "Lithium" },
+    { "material": "Cobalt" },
+    { "material": "Nickel" },
+    { "material": "Natural Graphite" }
+  ],
+  "stateOfHealthPercent": 100,
+  "cycleCount": 0
+}

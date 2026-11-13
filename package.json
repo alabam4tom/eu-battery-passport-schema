@@ -1,0 +1,23 @@
+{
+  "name": "eu-battery-passport-schema",
+  "version": "1.0.0",
+  "description": "Open-source TypeScript & JSON Schema for the EU Battery Digital Product Passport (Regulation (EU) 2023/1542, Annex XIII).",
+  "type": "module",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "homepage": "https://www.dppify.com/dpp-batteries",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alabam4tom/eu-battery-passport-schema.git"
+  },
+  "keywords": [
+    "digital-product-passport",
+    "dpp",
+    "espr",
+    "battery-passport",
+    "eu-2023-1542",
+    "gs1-digital-link",
+    "untp",
+    "annex-xiii"
+  ]
+}
